@@ -22,8 +22,7 @@ import { usePoller } from './hooks/usePoller';
 
 import toast, { Toaster } from 'react-hot-toast';
 
-const IMAGE_LINK = '/Skelly.jpg';
-const LOGO_LINK = '/DOTD-logo-1.png';
+const IMAGE_LINK = '/sr_logo.png';
 
 const ConnectButton = styled(WalletMultiButton)`
     width: 100%;
@@ -154,12 +153,9 @@ const Home = (props: HomeProps) => {
     }, [anchorWallet, props.candyMachineId, props.connection, refreshCandyMachineState]);
 
     return (
-        <div className="bg-ded bg-[length:200px] min-h-screen">
+        <div className="bg-[length:200px] min-h-screen">
             <Toaster />
             <div className="grid min-h-screen grid-cols-1 bg-black/95 place-content-center">
-                <div className="relative p-4 bg-[#212529] shadow-xl border-neutral-600 mt-3 ring-1  max-w-sm mx-auto rounded-lg my-3">
-                    <img src={LOGO_LINK} alt="" width="100%" style={{ borderRadius: '5px' }} />
-                </div>
                 <div className="relative p-2 bg-[#212529] shadow-xl border-neutral-600 aspect-square ring-1  max-w-sm mx-auto my-3 rounded-lg ">
                     <img src={IMAGE_LINK} alt="" width="100%" style={{ borderRadius: '5px' }} />
                 </div>
